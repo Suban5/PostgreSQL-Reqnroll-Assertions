@@ -25,15 +25,17 @@ This framework demonstrates how to perform assertions on PostgreSQL database sta
 - [Npgsql](https://www.npgsql.org/) — PostgreSQL driver for .NET.
 
 ## Project Structure
- ├── Features/ 
- ├── Scripts/ 
- ├── StepDefinitions/ 
- ├── Support/ 
-    └── Configuration/ 
-    └── Database/ 
-    └── Extensions/
-    └── Models/ 
- 
+ PostgreSQL-Reqnroll-Assertions/
+├── Features/
+├── StepDefinitions/
+├── Support/
+│   ├── Configuration/          # Reqnroll step definitions for DB operations
+│   ├── Database/               # Utilities (DB connection, DataTable parsing)
+│   ├── Extensions/                # Database entity models
+│   └── Models/                 # Sample Gherkin feature files
+└── scripts/                   # SQL scripts or setup helpers
+
+
 - **Features/**: Gherkin `.feature` files describing test scenarios in a human-readable format.
 - **Scripts/**: SQL scripts, such as [`Scripts/createTable.txt`](./Scripts/createTable.txt), used for database schema setup or teardown.
 - **StepDefinitions/**: C# classes with methods that implement the Gherkin steps defined in feature files.
@@ -59,6 +61,14 @@ This framework demonstrates how to perform assertions on PostgreSQL database sta
 
 4. **Extend as needed:**
    - Add new feature files in [`Features/`](./Features/), step definitions in [`StepDefinitions/`](./StepDefinitions/), or models in [`Support/Models/`](./Support/Models/) as your schema or scenarios grow.
+
+## Quickstart
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/yourusername/PostgreSQL-Reqnroll-Assertions.git
+   cd PostgreSQL-Reqnroll-Assertions
+   ```
 
 ## External Resources
 

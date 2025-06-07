@@ -1,0 +1,12 @@
+{
+    "cucumberautocomplete.syncfeatures": "ReqnrollDbTest/**/*.feature",
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "cucumberautocomplete.smartSnippets": true,
+    "cucumberautocomplete.stepsInvariants": true,
+    "cucumberautocomplete.steps": [
+        "ReqnrollDbTest/**/*.cs"
+    ],
+    "files.exclude": {
+        "**/*.feature.cs": true
+    }
+}

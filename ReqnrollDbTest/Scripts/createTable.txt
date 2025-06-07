@@ -1,0 +1,21 @@
+-- Create database
+CREATE DATABASE reqnroll_test_db;
+
+-- Drop table if exists
+--DROP TABLE IF EXISTS Customer;
+
+-- Create Customer table
+CREATE TABLE Customer (
+    CustomerID SERIAL PRIMARY KEY,
+    FirstName VARCHAR(100) NOT NULL,
+    LastName VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    Phone VARCHAR(20),
+    Address VARCHAR(255),
+    City VARCHAR(100),
+    State VARCHAR(50),
+    ZipCode VARCHAR(20),
+    Country VARCHAR(100),
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

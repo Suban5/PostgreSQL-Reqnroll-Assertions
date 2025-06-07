@@ -1,4 +1,4 @@
-# ReqnrollDbTest
+# PostgreSQL-Reqnroll-Assertions
 
 This project is a BDD-style test automation framework for PostgreSQL-backed applications. It uses [Reqnroll](https://reqnroll.net/) (a SpecFlow fork), [Dapper](https://github.com/DapperLib/Dapper), and [NUnit](https://nunit.org/) to help developers and QA write clear, maintainable database tests using Gherkin feature files.
 

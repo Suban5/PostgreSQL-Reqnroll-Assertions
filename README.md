@@ -25,16 +25,18 @@ This framework demonstrates how to perform assertions on PostgreSQL database sta
 - [Npgsql](https://www.npgsql.org/) — PostgreSQL driver for .NET.
 
 ## Project Structure
- PostgreSQL-Reqnroll-Assertions/
-├── Features/
-├── StepDefinitions/
-├── Support/
-│   ├── Configuration/          # Reqnroll step definitions for DB operations
-│   ├── Database/               # Utilities (DB connection, DataTable parsing)
-│   ├── Extensions/                # Database entity models
-│   └── Models/                 # Sample Gherkin feature files
-└── scripts/                   # SQL scripts or setup helpers
-
+```
+ReqnrollDbTest/
+├── Features/               # Gherkin feature files (.feature)
+├── StepDefinitions/        # Reqnroll step definitions - Maps Gherkin steps to code
+├── Support/                # Supporting infrastructure and utilities
+│   ├── Configuration/      # Configuration files 
+│   ├── Database/           # Database connection and query logic
+│   ├── Extensions/         # Custom extensions (PostgreSqlDataHelper)
+│   └── Models/             # Domain models/entities (POCO classes for database tables)
+├── appsetting.json         # Configure PostgresDb connection
+└── scripts/                # Database scripts (SQL) (create Db, table and insert data)
+```
 
 - **Features/**: Gherkin `.feature` files describing test scenarios in a human-readable format.
 - **Scripts/**: SQL scripts, such as [`Scripts/createTable.txt`](./Scripts/createTable.txt), used for database schema setup or teardown.
@@ -48,6 +50,7 @@ This framework demonstrates how to perform assertions on PostgreSQL database sta
 ## How to Use
 
 1. **Set up the database:**
+   - Create database in PostgreSql
    - Run the SQL in [`Scripts/createTable.txt`](./Scripts/createTable.txt) to create the required tables in your PostgreSQL instance.
    - Run the SQL in [`Scripts/insertData.txt`](./Scripts/insertData.txt) to insert any initial or sample data needed for your tests.
 
